@@ -1,0 +1,24 @@
+pipeline:
+  name: pipelineGitXmaster
+  identifier: pipelineGitXmaster
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: adf
+        identifier: adf
+        template:
+          templateRef: stageDemoMain
+          versionLabel: v2
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
