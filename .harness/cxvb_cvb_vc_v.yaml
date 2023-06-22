@@ -1,0 +1,21 @@
+inputSet:
+  name: cxvb cvb vc v
+  identifier: cxvb_cvb_vc_v
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: dsafasdfadsfasdfas
+    stages:
+      - stage:
+          identifier: sdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
