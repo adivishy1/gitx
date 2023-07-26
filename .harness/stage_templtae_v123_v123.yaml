@@ -1,0 +1,29 @@
+template:
+  name: stage templtae v123
+  identifier: stage_templtae_v123
+  versionLabel: v123
+  type: Stage
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: s
+              identifier: s
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                isAutoRejectEnabled: false
+                approverInputs: []
