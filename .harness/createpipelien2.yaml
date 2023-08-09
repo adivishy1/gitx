@@ -11,3 +11,9 @@ pipeline:
         template:
           templateRef: stage_template_execution_test
           versionLabel: v1
+    - stage:
+        name: asd
+        identifier: asd
+        template:
+          templateRef: stage_template_execution_test2
+          versionLabel: v12
