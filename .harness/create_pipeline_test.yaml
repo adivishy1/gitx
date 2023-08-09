@@ -1,0 +1,13 @@
+pipeline:
+  name: create pipeline test
+  identifier: create_pipeline_test
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: stage_template_execution_test
+          versionLabel: v1
