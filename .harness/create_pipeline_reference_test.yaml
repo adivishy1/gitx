@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: ds
-        identifier: ds
+        name: ds1
+        identifier: ds1
         template:
           templateRef: testStage_template_v2
           versionLabel: vwe
