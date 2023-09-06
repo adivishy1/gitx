@@ -1,0 +1,21 @@
+inputSet:
+  name: input set p1123123
+  identifier: input_set_p1123123
+  orgIdentifier: default
+  projectIdentifier: test_adi
+  pipeline:
+    identifier: remote_pipeline_p1123123
+    stages:
+      - stage:
+          identifier: asd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ads
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
