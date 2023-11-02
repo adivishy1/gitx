@@ -47,9 +47,3 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
-    - stage:
-        name: qwe
-        identifier: qwe
-        template:
-          templateRef: stage_template_execution_test
-          versionLabel: v1
