@@ -1,0 +1,32 @@
+pipeline:
+  name: test demo pipeline
+  identifier: test_demo_pipeline
+  projectIdentifier: do_not_delete_demo
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage
+        identifier: stage
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: s1
+                  identifier: s1
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
