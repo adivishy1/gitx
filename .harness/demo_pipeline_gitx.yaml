@@ -30,3 +30,9 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: mdfgh
+        identifier: mdfgh
+        template:
+          templateRef: stage_template_execution_test2
+          versionLabel: v12
