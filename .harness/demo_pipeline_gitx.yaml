@@ -47,3 +47,9 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
+    - stage:
+        name: dfgh
+        identifier: dfgh
+        template:
+          templateRef: stage_template_execution_test
+          versionLabel: v1
