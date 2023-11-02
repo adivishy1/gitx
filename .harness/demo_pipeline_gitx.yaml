@@ -30,3 +30,26 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: dfsg
+        identifier: dfsg
+        template:
+          templateRef: testStage_template_v2
+          versionLabel: vwe
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: dsf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: qwe
+        identifier: qwe
+        template:
+          templateRef: stage_template_execution_test
+          versionLabel: v1
