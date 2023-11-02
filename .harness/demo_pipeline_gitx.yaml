@@ -31,23 +31,6 @@ pipeline:
                     approverInputs: []
         tags: {}
     - stage:
-        name: sdf
-        identifier: sdf
-        template:
-          templateRef: testStage_template_v2
-          versionLabel: vwe
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: dsf
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
-    - stage:
         name: dfgh
         identifier: dfgh
         template:
