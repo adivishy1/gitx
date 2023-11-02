@@ -20,11 +20,11 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following information
+                      Please review the following info
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
-                      minimumCount: 1
+                      minimumCount: <+input>
                       disallowPipelineExecutor: false
                       userGroups: <+input>
                     isAutoRejectEnabled: false
