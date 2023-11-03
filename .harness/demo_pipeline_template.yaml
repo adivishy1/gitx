@@ -1,0 +1,13 @@
+pipeline:
+  name: demo pipeline - template
+  identifier: demo_pipeline_template
+  projectIdentifier: do_not_delete_demo
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage
+        identifier: stage
+        template:
+          templateRef: stage2_template_demo
+          versionLabel: v1
