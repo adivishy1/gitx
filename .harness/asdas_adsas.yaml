@@ -7,21 +7,179 @@ template:
   orgIdentifier: default
   tags: {}
   spec:
-    type: CI
+    type: Custom
     spec:
-      cloneCodebase: false
-      platform:
-        os: Linux
-        arch: Amd64
-      runtime:
-        type: Docker
-        spec: {}
       execution:
         steps:
           - step:
-              type: Run
-              name: Run_1
-              identifier: Run_1
+              type: ShellScript
+              name: BeginAutomationMessage
+              identifier: BeginAutomationMessage
               spec:
-                shell: Sh
-                command: <+input>
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      if  <+stage.variables.RUN_TEST>
+                      then
+                        curl --data '{"text": "Begin automation test using category <+stage.variables.CATEGORY> for <+stage.variables.SERVICE> (<+stage.variables.ARTIFACT>)"}' -H 'Content-Type: application/json' -X POST 'https://chat.googleapis.com/v1/spaces/<+stage.variables.GOOGLE_CHAT_SPACE_ID>/messages?key=<+stage.variables.GOOGLE_CHAT_SPACE_KEY>&token=<+stage.variables.GOOGLE_CHAT_SPACE_TOKEN>'
+                      else
+                        curl --data '{"text": "Skip automation test for <+stage.variables.SERVICE> (<+stage.variables.ARTIFACT>)"}' -H 'Content-Type: application/json' -X POST 'https://chat.googleapis.com/v1/spaces/<+stage.variables.GOOGLE_CHAT_SPACE_ID>/messages?key=<+stage.variables.GOOGLE_CHAT_SPACE_KEY>&token=<+stage.variables.GOOGLE_CHAT_SPACE_TOKEN>'
+                      fi
+          - step:
+              type: ShellScript
+              name: ExecuteAutomation
+              identifier: ExecuteAutomation
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      set -e
+                      BASE_DIR=$(pwd)
+                      CLEAN_UP_DIR="tmp/<+pipeline.executionId>/<+stage.name>"
+                      mkdir -p "$CLEAN_UP_DIR"
+
+                      git clone "https://$GITHUB_TOKEN@github.com/standardindustries/gafe-auto-tests.git" "$CLEAN_UP_DIR"
+                      cd "$CLEAN_UP_DIR"
+
+                      CATEGORY="$CATEGORY-**"
+                      echo $ENV
+                      echo $CATEGORY
+                      echo $RUN_TEST
+
+                      npm install
+                      npm run browserstack:category
+                      node ./scripts/generate-report.js 
+                      node ./scripts/read-test-results.js
+                      node ./scripts/send-test-result.js
+
+                      cd $BASE_DIR && rm -rf "$CLEAN_UP_DIR"
+                environmentVariables:
+                  - name: GITHUB_TOKEN
+                    type: String
+                    value: <+stage.variables.GITHUB_TOKEN>
+                  - name: BROWSERSTACK_USERNAME
+                    type: String
+                    value: <+stage.variables.BROWSERSTACK_USERNAME>
+                  - name: BROWSERSTACK_ACCESS_KEY
+                    type: String
+                    value: <+stage.variables.BROWSERSTACK_ACCESS_KEY>
+                  - name: SECRET_KEY
+                    type: String
+                    value: <+stage.variables.SECRET_KEY>
+                  - name: ENV
+                    type: String
+                    value: <+stage.variables.ENV>
+                  - name: CATEGORY
+                    type: String
+                    value: <+stage.variables.CATEGORY>
+              when:
+                stageStatus: Success
+                condition: <+stage.variables.RUN_TEST> == "true"
+              timeout: 2h
+              failureStrategies:
+                - onFailure:
+                    errors:
+                      - AllErrors
+                    action:
+                      type: MarkAsFailure
+          - step:
+              type: ShellScript
+              name: Failure
+              identifier: Failure
+              when:
+                stageStatus: Failure
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      curl --data '{"text": "Automation test failed using category <+stage.variables.CATEGORY> for <+stage.variables.SERVICE> (<+stage.variables.ARTIFACT>) <+stage.executionUrl>"}' -H 'Content-Type: application/json' -X POST 'https://chat.googleapis.com/v1/spaces/<+stage.variables.GOOGLE_CHAT_SPACE_ID>/messages?key=<+stage.variables.GOOGLE_CHAT_SPACE_KEY>&token=<+stage.variables.GOOGLE_CHAT_SPACE_TOKEN>'
+
+                      exit 1
+              failureStrategies:
+                - onFailure:
+                    errors:
+                      - AllErrors
+                    action:
+                      type: ManualIntervention
+                      spec:
+                        timeout: 2h
+                        onTimeout:
+                          action:
+                            type: MarkAsFailure
+          - step:
+              type: ShellScript
+              name: CompleteAutomationMessage
+              identifier: CompleteAutomationMessage
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      curl --data '{"text": "Automation test for <+stage.variables.SERVICE> (<+stage.variables.ARTIFACT>) PASSED!"}' -H 'Content-Type: application/json' -X POST 'https://chat.googleapis.com/v1/spaces/<+stage.variables.GOOGLE_CHAT_SPACE_ID>/messages?key=<+stage.variables.GOOGLE_CHAT_SPACE_KEY>&token=<+stage.variables.GOOGLE_CHAT_SPACE_TOKEN>'
+              when:
+                stageStatus: Success
+                condition: <+stage.variables.RUN_TEST> == "true"
+    variables:
+      - name: ENV
+        type: String
+        description: Environment to test using automation
+        value: <+input>
+      - name: CATEGORY
+        type: String
+        description: Functional area to test within the suite of automation tests.
+        value: <+input>
+      - name: RUN_TEST
+        type: String
+        description: Should automation tests be run.  Temporary variable since some envs currently do not support automation test but should in the future.
+        value: <+input>
+      - name: SERVICE
+        type: String
+        description: The Harness Service being deployed that the automation test is testing
+        value: <+input>
+      - name: ARTIFACT
+        type: String
+        description: The artifact (git sha) being deployed that the automation test is testing.
+        value: <+input>
+      - name: GOOGLE_CHAT_SPACE_ID
+        type: String
+        description: The ID in the path of the webhook generated URL
+        value: <+input>
+      - name: GOOGLE_CHAT_SPACE_KEY
+        type: String
+        description: The value of the KEY attribute of the querystring from the webhook generated URL
+        value: <+input>
+      - name: GOOGLE_CHAT_SPACE_TOKEN
+        type: String
+        description: The value of the TOKEN attribute of the querystring from the webhook generated URL
+        value: <+input>
+      - name: BROWSERSTACK_USERNAME
+        type: Secret
+        description: ""
+        required: true
+        value: account.BrowserstackUsername
+      - name: BROWSERSTACK_ACCESS_KEY
+        type: Secret
+        description: ""
+        required: true
+        value: account.BrowserstackAccessKey
+      - name: SECRET_KEY
+        type: Secret
+        description: ""
+        required: true
+        value: account.CypressSecretKey
+      - name: GITHUB_TOKEN
+        type: Secret
+        description: ""
+        required: true
+        value: account.GithubSIToken
