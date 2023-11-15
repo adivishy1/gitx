@@ -1,0 +1,20 @@
+inputSet:
+  name: inputsetgitx
+  identifier: inputsetgitx
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: pipeline_gitx
+    stages:
+      - stage:
+          identifier: fs
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 1
