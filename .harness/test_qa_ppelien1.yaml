@@ -1,5 +1,5 @@
 pipeline:
-  name: test qa ppelien1
+  name: test_qa_ppelien1
   identifier: test_qa_ppelien1
   projectIdentifier: AmitTest
   orgIdentifier: default
