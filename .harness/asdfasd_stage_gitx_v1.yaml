@@ -17,7 +17,7 @@ template:
               timeout: 1d
               spec:
                 approvalMessage: |-
-                  Please review the following information
+                  Please review the following idfsnformation
                   and approve the pipeline progression
                 includePipelineExecutionHistory: true
                 approvers:
