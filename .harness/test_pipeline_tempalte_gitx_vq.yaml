@@ -22,7 +22,7 @@ template:
                     timeout: 1d
                     spec:
                       approvalMessage: |-
-                        Please review the following info
+                        Please review the following infol
                         and approve the pipeline 
                       includePipelineExecutionHistory: true
                       approvers:
