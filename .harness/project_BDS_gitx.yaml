@@ -1,0 +1,33 @@
+pipeline:
+  name: project BDS gitx
+  identifier: project_BDS_gitx
+  projectIdentifier: AmitGitX
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fsd
+        identifier: fsd
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: sad
+                  identifier: sad
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account._account_all_users
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
