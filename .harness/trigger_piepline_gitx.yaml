@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following info112
+                      Please review the following info112sa
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
