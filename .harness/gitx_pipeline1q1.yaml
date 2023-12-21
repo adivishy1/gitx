@@ -3,7 +3,8 @@ pipeline:
   identifier: gitx_pipeline1q1
   projectIdentifier: AmitTest
   orgIdentifier: default
-  tags: {}
+  tags: 
+    project_id: <+pipeline.variables.PROJECT_ID>
   stages:
     - stage:
         name: vfd
