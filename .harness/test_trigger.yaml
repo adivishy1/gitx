@@ -20,8 +20,8 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following info12sd
-                      and approve the pipeline progression32d
+                      Please review the following info
+                      and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
