@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following info12sd
-                      and approve the pipeline progression32
+                      and approve the pipeline progression32d
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
