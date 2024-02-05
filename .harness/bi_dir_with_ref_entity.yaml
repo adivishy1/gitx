@@ -1,0 +1,25 @@
+pipeline:
+  name: bi dir with ref entity
+  identifier: bi_dir_with_ref_entity
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        tags: {}
+        template:
+          templateRef: org.asdfasd_stage_gitx
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
