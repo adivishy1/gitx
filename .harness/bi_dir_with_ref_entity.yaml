@@ -7,7 +7,7 @@ pipeline:
   stages:
     - stage:
         name: dfs1
-        identifier: dfs1df
+        identifier: d
         tags: {}
         template:
           templateRef: org.asdfasd_stage_gitx
