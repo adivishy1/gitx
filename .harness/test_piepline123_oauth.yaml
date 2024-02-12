@@ -1,0 +1,32 @@
+pipeline:
+  name: test piepline123 oauth
+  identifier: test_piepline123_oauth
+  projectIdentifier: test_bi_dir_sync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: okok
+        identifier: okok
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: ijhik
+                  identifier: ijhik
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
