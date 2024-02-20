@@ -18,7 +18,7 @@ pipeline:
               execution:
                 steps:
                   - step:
-                      identifier: asfsd12
+                      identifier: asfs
                       type: HarnessApproval
                       spec:
                         approvers:
