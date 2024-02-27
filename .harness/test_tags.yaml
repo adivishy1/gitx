@@ -3,7 +3,8 @@ pipeline:
   identifier: test_tags
   projectIdentifier: AmitTest
   orgIdentifier: default
-  tags: {}
+  tags: 
+    taglatest: abcd
   stages:
     - stage:
         name: sd
