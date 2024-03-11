@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeline applytempaltes
+  identifier: test_pipeline_applytempaltes
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sda
+        identifier: sda
+        tags: {}
+        template:
+          templateRef: test_appluTempaltes
+          versionLabel: sdv
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
