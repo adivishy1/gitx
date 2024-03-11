@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeilne gitx qrwe
+  identifier: test_pipeilne_gitx_qrwe
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asdf
+        identifier: asdf
+        tags: {}
+        template:
+          templateRef: test_gitx_stagew
+          versionLabel: vads
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: afsd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
