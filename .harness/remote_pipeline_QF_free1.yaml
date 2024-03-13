@@ -1,0 +1,32 @@
+pipeline:
+  name: remote pipeline QF free1
+  identifier: remote_pipeline_QF_free1
+  projectIdentifier: Test_gitX_webhooks
+  orgIdentifier: default_1666106363316
+  tags: {}
+  stages:
+    - stage:
+        name: asdf
+        identifier: asdf
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: sadf
+                  identifier: sadf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
