@@ -1,0 +1,32 @@
+pipeline:
+  name: devspace pipelnie
+  identifier: devspace_pipelnie
+  projectIdentifier: test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fsd
+        identifier: fsd
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: asd
+                  identifier: asd
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
