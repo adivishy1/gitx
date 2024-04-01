@@ -1,0 +1,4 @@
+service:
+  name: svc_issue
+  identifier: svc_issue
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
