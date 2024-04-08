@@ -1,6 +1,5 @@
 pipeline:
   name: test pipelinenrqewrq gitx
-  identifier: test_pipelinenrqewrq_gitx
   projectIdentifier: GitX_Remote
   orgIdentifier: default
   tags: {}
