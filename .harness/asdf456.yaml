@@ -1,0 +1,32 @@
+pipeline:
+  name: asdf456
+  identifier: asdf456
+  projectIdentifier: adithya_test
+  orgIdentifier: default_1666106363316
+  tags: {}
+  stages:
+    - stage:
+        name: dfv
+        identifier: dfv
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: fd
+                  identifier: fd
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
