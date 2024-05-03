@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following infogitmtion
-                      and approve the pipeline progression
+                      and approve the pipeline progression d
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
