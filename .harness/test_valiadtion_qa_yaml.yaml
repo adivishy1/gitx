@@ -1,8 +1,6 @@
 pipeline:
   name: test valiadtion qa yaml
   identifier: test_valiadtion_qa_yaml
-  projectIdentifier: AmitTest
-  orgIdentifier: default
   tags: {}
   stages:
     - stage:
@@ -30,3 +28,5 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: default
