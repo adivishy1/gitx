@@ -18,7 +18,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following infor mation
+                      Please review the following infor mationkj
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
