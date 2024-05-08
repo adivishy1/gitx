@@ -16,7 +16,6 @@ pipeline:
               - step:
                   name: dsf
                   identifier: dsf
-                  type: HarnessApproval
                   timeout: 1d
                   spec:
                     approvalMessage: |-
