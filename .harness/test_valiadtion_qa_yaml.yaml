@@ -1,4 +1,4 @@
-template:
+pipeline:
   name: test valiadtion qa yaml
   identifier: test_valiadtion_qa_yaml
   tags: {}
