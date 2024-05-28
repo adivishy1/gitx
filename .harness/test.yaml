@@ -1,0 +1,21 @@
+inputSet:
+  name: test
+  identifier: test
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: test_valiadtion_qa_yaml
+    stages:
+      - stage:
+          identifier: sd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account.abcdldaptest
