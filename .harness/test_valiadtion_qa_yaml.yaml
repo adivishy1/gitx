@@ -18,7 +18,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following update from git
+                      Please review the following updated
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
