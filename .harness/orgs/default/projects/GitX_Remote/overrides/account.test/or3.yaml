@@ -1,6 +1,0 @@
-overrides:
-  variables:
-    - name: test
-      type: Number
-      value: 1
-      required: false
