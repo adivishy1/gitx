@@ -13,7 +13,7 @@ pipeline:
           templateRef: remote_stage_template_demo
           versionLabel: v1
           templateInputs:
-            type: Approval
+            type: Approval123
             spec:
               execution:
                 steps:
