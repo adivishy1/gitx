@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeline asdgasd
+  identifier: test_pipeline_asdgasd
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: test_stage_template_sdfasdf
+          versionLabel: rr4
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: stage1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
