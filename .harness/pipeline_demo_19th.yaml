@@ -4,7 +4,7 @@ pipeline:
   projectIdentifier: AmitTest
   orgIdentifier: default
   tags: {}
-  stages:
+  stage:
     - stage:
         name: stage1
         identifier: stage1
