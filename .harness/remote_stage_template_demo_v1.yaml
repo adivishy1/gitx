@@ -19,10 +19,10 @@ template:
               spec:
                 approvalMessage: |-
                   Please review the following information
-                  and approve the pipeline progression
+                  and min of approvals needed the pipeline progression
                 includePipelineExecutionHistory: true
                 approvers:
-                  minimumCount: 1
+                  minimumCount: 2
                   disallowPipelineExecutor: false
                   userGroups: <+input>
                 isAutoRejectEnabled: false
