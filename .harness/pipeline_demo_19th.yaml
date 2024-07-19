@@ -1,0 +1,25 @@
+pipeline:
+  name: pipeline demo 19th
+  identifier: pipeline_demo_19th
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        tags: {}
+        template:
+          templateRef: remote_stage_template_demo
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: s1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
