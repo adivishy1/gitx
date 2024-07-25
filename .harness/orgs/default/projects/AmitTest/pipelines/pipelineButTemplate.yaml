@@ -1,0 +1,20 @@
+template:
+  name: inlineStep
+  identifier: inlineStep
+  type: Step
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo 'hi'
+      environmentVariables: []
+      outputVariables: []
+  versionLabel: "2"
