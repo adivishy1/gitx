@@ -1,0 +1,6 @@
+environment:
+  name: test env prod1
+  identifier: test_env_prod1
+  orgIdentifier: default
+  projectIdentifier: test_adithya
+  type: Production
