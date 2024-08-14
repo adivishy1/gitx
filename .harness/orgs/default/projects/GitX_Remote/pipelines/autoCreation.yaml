@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following sdf
+                      Please review the following
                       and approve the pipeline sdfg
                     includePipelineExecutionHistory: true
                     approvers:
