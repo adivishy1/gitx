@@ -1,0 +1,17 @@
+template:
+  name: testtt issue
+  identifier: testtt_issue
+  versionLabel: vw
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          tags: {}
+          template:
+            templateRef: test_issue
+            versionLabel: v1
