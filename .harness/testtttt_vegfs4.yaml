@@ -16,7 +16,7 @@ template:
               timeout: 1d
               spec:
                 approvalMessage: |-
-                  Please review the following
+                  Please review the following update
                   and approve the pipeline progression
                 includePipelineExecutionHistory: true
                 approvers:
