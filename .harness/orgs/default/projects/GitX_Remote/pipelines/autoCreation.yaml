@@ -16,7 +16,7 @@ pipeline:
               - step:
                   name: svd
                   identifier: svd
-                  type: HarnessApproval
+                  typ: HarnessApproval
                   timeout: 1d
                   spec:
                     approvalMessage: |-
