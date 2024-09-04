@@ -9,7 +9,7 @@ pipeline:
         name: dcsv
         identifier: dcsv
         description: ""
-        typ: Approval
+        type: Approval
         spec:
           execution:
             steps:
