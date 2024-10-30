@@ -1,0 +1,21 @@
+inputSet:
+  name: kjhkhk
+  identifier: kjhkhk
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_cfdd_remoteee
+    stages:
+      - stage:
+          identifier: kj
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: kj
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
