@@ -1,5 +1,6 @@
 inputSet:
   name: kjhkhk
+  tags: {}
   identifier: kjhkhk
   orgIdentifier: default
   projectIdentifier: GitX_Remote
@@ -19,4 +20,3 @@ inputSet:
                       approvers:
                         userGroups:
                           - account._account_all_users
-                          - account.testUserGroup2
