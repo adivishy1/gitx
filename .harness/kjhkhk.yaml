@@ -19,3 +19,4 @@ inputSet:
                       approvers:
                         userGroups:
                           - account._account_all_users
+                          - account.testUserGroup2
