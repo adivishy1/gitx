@@ -1,0 +1,29 @@
+template:
+  name: test
+  identifier: test
+  versionLabel: sdfgsdgf
+  type: Stage
+  projectIdentifier: pl_auto_project_uiqsEcQRJE
+  orgIdentifier: pl_auto_org_wVLxB8E5hO
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: fds
+              identifier: fds
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                isAutoRejectEnabled: false
+                approverInputs: []
