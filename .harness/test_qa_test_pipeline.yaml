@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following FF disabled
+                      Please review the following 2 FFs enabled
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
