@@ -1,0 +1,23 @@
+template:
+  name: step group template2
+  identifier: step_group_template2
+  versionLabel: sdf23123
+  type: StepGroup
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          name: s1
+          identifier: s1
+          template:
+            templateRef: step2_template
+            versionLabel: vs12
+      - step:
+          name: s2
+          identifier: s2
+          template:
+            templateRef: step1_template
+            versionLabel: qwe123
