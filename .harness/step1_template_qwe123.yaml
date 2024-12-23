@@ -1,0 +1,21 @@
+template:
+  name: step1 template
+  identifier: step1_template
+  versionLabel: qwe123
+  type: Step
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo "from step1 template"
+      environmentVariables: []
+      outputVariables: []
