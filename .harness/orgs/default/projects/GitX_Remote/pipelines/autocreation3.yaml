@@ -1,0 +1,32 @@
+pipeline:
+  name: autoCreation3
+  identifier: autoCreation3
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dcsv
+        identifier: dcsv
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: svd
+                  identifier: svd
+                  typ: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following
+                      and approve the pipeline sdfg
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
