@@ -1,6 +1,6 @@
 template:
-  name: GitXTemplate
-  identifier: GitXTemplate
+  name: KKTestNoType
+  identifier: KKTestNoType
   versionLabel: v1
   tags: {}
   spec:
