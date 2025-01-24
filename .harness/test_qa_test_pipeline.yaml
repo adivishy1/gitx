@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following testing local123 qa1 
+                      Please review the following testing 
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
