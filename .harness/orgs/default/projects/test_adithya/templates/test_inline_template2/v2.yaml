@@ -1,0 +1,43 @@
+template:
+  name: test inline template2
+  identifier: test_inline_template2
+  type: Stage
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sdf
+              identifier: sdf
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                isAutoRejectEnabled: false
+                approverInputs: []
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo Hi
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+  versionLabel: v2
