@@ -1,0 +1,6 @@
+environment:
+  name: test env 123
+  identifier: test_env_123
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoExpressionsLViohjATX2
+  type: PreProduction
