@@ -1,0 +1,5 @@
+service:
+  name: test remote1
+  identifier: test_remote1
+  orgIdentifier: default
+  projectIdentifier: AmitTest
