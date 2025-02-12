@@ -1,0 +1,5 @@
+service:
+  name: remote service123
+  identifier: remote_service123
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: AmitTest
