@@ -1,0 +1,19 @@
+template:
+  name: bulkstage2
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: vds
+              identifier: vds
+              template:
+                templateRef: bulkstep1
+                versionLabel: "1"
+  identifier: bulkstage2
+  versionLabel: "3"
