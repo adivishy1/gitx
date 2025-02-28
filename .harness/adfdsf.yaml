@@ -1,0 +1,20 @@
+inputSet:
+  name: adfdsf
+  identifier: adfdsf
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_input_sets
+    stages:
+      - stage:
+          identifier: asd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 2
