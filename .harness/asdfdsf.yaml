@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: asdfdsf
+  identifier: asdfdsf
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: test_input_sets
+  inputSetReferences:
+    - tre
+  tags: {}
