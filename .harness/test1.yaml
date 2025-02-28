@@ -1,0 +1,20 @@
+inputSet:
+  name: test1
+  identifier: test1
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_input_sets
+    stages:
+      - stage:
+          identifier: asd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: dsf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        minimumCount: 2
