@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeline dsfvsdfvfds
+  identifier: test_pipeline_dsfvsdfvfds
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ads
+        identifier: ads
+        tags: {}
+        template:
+          templateRef: test_remote_template_12312
+          versionLabel: fdv
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fda
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
