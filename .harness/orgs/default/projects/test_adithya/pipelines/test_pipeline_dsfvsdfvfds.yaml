@@ -3,7 +3,7 @@ pipeline:
   identifier: test_pipeline_dsfvsdfvfds
   projectIdentifier: test_adithya
   orgIdentifier: default
-  tags: {dfds}
+  tags: {dfds,dfgh}
   stages:
     - stage:
         name: ads
