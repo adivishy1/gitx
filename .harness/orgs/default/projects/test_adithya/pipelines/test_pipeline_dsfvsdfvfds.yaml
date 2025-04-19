@@ -3,7 +3,7 @@ pipeline:
   identifier: test_pipeline_dsfvsdfvfds
   projectIdentifier: test_adithya
   orgIdentifier: default
-  tags: {}
+  tags: {dfds}
   stages:
     - stage:
         name: ads
@@ -18,7 +18,7 @@ pipeline:
               execution:
                 steps:
                   - step:
-                      identifier: fdasd
+                      identifier: fda
                       type: HarnessApproval
                       spec:
                         approvers:
