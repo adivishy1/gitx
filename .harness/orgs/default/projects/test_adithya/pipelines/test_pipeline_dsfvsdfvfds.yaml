@@ -18,7 +18,7 @@ pipeline:
               execution:
                 steps:
                   - step:
-                      identifier: fda
+                      identifier: fdasd
                       type: HarnessApproval
                       spec:
                         approvers:
