@@ -41,7 +41,7 @@ pipeline:
         type: Slack
         spec:
           userGroups: []
-          webhookUrl: https://hooks.slack.com/services/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
+          webhookUrl: test
       enabled: true
       template:
         versionLabel: v1
