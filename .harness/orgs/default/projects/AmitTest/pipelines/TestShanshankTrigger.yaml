@@ -28,3 +28,18 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  notificationRules:
+    - name: n1
+      identifier: n1
+      pipelineEvents:
+        - type: TriggerFailed
+        - type: PipelineStart
+        - type: PipelineEnd
+        - type: PipelineSuccess
+        - type: PipelineFailed
+      notificationMethod:
+        type: Slack
+        spec:
+          userGroups: []
+          webhookUrl: https://hooks.slack.com/services/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
+      enabled: true
