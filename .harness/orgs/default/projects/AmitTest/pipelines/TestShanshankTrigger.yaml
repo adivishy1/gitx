@@ -43,3 +43,6 @@ pipeline:
           userGroups: []
           webhookUrl: https://hooks.slack.com/services/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
       enabled: true
+      template:
+        versionLabel: v1
+        templateRef: AmitTest12
