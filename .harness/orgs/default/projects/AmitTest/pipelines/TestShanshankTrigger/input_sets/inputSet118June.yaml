@@ -1,0 +1,22 @@
+inputSet:
+  name: inputSet1-18June
+  identifier: inputSet118June
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: TestShanshankTrigger
+    stages:
+      - stage:
+          identifier: s12
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: exit 1
