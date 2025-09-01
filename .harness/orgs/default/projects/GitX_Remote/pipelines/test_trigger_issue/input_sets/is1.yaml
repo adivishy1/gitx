@@ -1,0 +1,21 @@
+inputSet:
+  name: is1
+  identifier: is1
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_trigger_issue
+    stages:
+      - stage:
+          identifier: d
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: a
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
