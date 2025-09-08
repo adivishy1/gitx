@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following testing 123qwe
+                      Please review the following testing 123qwedsf
                       and approve the pipeline progression
                     includePipelineExecutionHistory: true
                     approvers:
