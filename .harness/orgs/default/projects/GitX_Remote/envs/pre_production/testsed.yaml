@@ -3,4 +3,4 @@ environment:
   identifier: testsed
   orgIdentifier: default
   projectIdentifier: GitX_Remote
-  type: Production
+  type: PreProduction
