@@ -1,0 +1,6 @@
+environment:
+  name: testsed
+  identifier: testsed
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  type: PreProduction
