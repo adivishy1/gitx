@@ -15,4 +15,3 @@ template:
           template:
             templateRef: stage_tempalte_repo1
             versionLabel: v1
-            gitBranch: main
