@@ -1,0 +1,26 @@
+pipeline:
+  name: asd
+  identifier: asd
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sa
+        identifier: sa
+        tags: {}
+        template:
+          templateRef: test_remote_template_12312
+          versionLabel: fdv
+          gitBranch: master-patch-non-deault-branch
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: fda
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
