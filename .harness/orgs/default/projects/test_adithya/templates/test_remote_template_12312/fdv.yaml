@@ -19,7 +19,7 @@ template:
               spec:
                 approvalMessage: |-
                   Please review the following information
-                  and approve the pipeline progression
+                  and approve the pipeline progression non deault branch
                 includePipelineExecutionHistory: true
                 approvers:
                   minimumCount: 1
