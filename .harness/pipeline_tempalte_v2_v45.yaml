@@ -1,0 +1,17 @@
+template:
+  name: pipeline tempalte v2
+  identifier: pipeline_tempalte_v2
+  versionLabel: v45
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dsf
+          identifier: dsf
+          tags: {}
+          template:
+            templateRef: org.stage_tempalte_org_level
+            versionLabel: v34
