@@ -12,7 +12,6 @@ pipeline:
         template:
           templateRef: test_remote_template_12312
           versionLabel: fdv
-          gitBranch: master-patch-non-deault-branch
           templateInputs:
             type: Approval
             spec:
