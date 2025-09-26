@@ -1,0 +1,18 @@
+template:
+  name: stage tempalte org level
+  identifier: stage_tempalte_org_level
+  versionLabel: v34
+  type: Stage
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: s2
+              identifier: s2
+              template:
+                templateRef: account.account_step_template_test
+                versionLabel: v12
