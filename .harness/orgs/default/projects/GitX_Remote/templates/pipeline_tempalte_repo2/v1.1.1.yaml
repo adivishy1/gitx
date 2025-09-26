@@ -1,0 +1,18 @@
+template:
+  name: pipeline tempalte repo2
+  identifier: pipeline_tempalte_repo2
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sq12
+          identifier: sq12
+          tags: {}
+          template:
+            templateRef: stage_tempalte_repo1
+            versionLabel: v1
+            gitBranch: main
+  versionLabel: v1.1.1
