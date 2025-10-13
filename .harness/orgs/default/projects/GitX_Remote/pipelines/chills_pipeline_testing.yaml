@@ -1,0 +1,25 @@
+pipeline:
+  name: chills pipeline testing
+  identifier: chills_pipeline_testing
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: df
+        identifier: df
+        tags: {}
+        template:
+          templateRef: org.asdfasd_stage_gitx
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
