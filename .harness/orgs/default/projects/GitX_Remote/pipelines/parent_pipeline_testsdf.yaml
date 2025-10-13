@@ -1,0 +1,33 @@
+pipeline:
+  name: parent pipeline testsdf
+  identifier: parent_pipeline_testsdf
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: chills_pipeline_testing
+          project: GitX_Remote
+          inputs:
+            identifier: chills_pipeline_testing
+            stages:
+              - stage:
+                  identifier: df
+                  template:
+                    templateInputs:
+                      type: Approval
+                      spec:
+                        execution:
+                          steps:
+                            - step:
+                                identifier: asf
+                                type: HarnessApproval
+                                spec:
+                                  approvers:
+                                    userGroups: <+input>
