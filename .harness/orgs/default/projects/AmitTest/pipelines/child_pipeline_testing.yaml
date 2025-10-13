@@ -1,0 +1,26 @@
+pipeline:
+  name: child pipeline testing
+  identifier: child_pipeline_testing
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: dsa
+        identifier: dsa
+        tags: {}
+        template:
+          templateRef: remote_stage_template_demo
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: s1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                          userGroups: <+input>
