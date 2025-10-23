@@ -26,3 +26,28 @@ template:
                         spec:
                           approvers:
                             userGroups: <+input>
+      - stage:
+          name: xfs
+          identifier: xfs
+          description: ""
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: dgh
+                    identifier: dgh
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvalMessage: |-
+                        Please review the following information
+                        and approve the pipeline progression
+                      includePipelineExecutionHistory: true
+                      approvers:
+                        minimumCount: 1
+                        disallowPipelineExecutor: false
+                        userGroups: <+input>
+                      isAutoRejectEnabled: false
+                      approverInputs: []
+          tags: {}
