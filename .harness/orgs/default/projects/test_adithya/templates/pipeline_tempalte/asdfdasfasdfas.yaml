@@ -1,0 +1,29 @@
+template:
+  name: pipeline tempalte
+  identifier: pipeline_tempalte
+  versionLabel: asdfdasfasdfas
+  type: Pipeline
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: kjh
+          identifier: kjh
+          tags: {}
+          template:
+            templateRef: stage_tempalte
+            versionLabel: dfvsdsdf
+            gitBranch: main
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: fds
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
