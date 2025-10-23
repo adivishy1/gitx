@@ -15,6 +15,7 @@ template:
           template:
             templateRef: stage_tempalte
             versionLabel: dfvsdsdf
+            gitBranch: main
             templateInputs:
               type: Approval
               spec:
