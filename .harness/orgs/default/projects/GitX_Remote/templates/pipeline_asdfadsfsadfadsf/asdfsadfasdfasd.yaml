@@ -1,0 +1,54 @@
+template:
+  name: pipeline_asdfadsfsadfadsf
+  identifier: pipeline_asdfadsfsadfadsf
+  versionLabel: asdfsadfasdfasd
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sdf
+          identifier: sdf
+          tags: {}
+          template:
+            templateRef: stage_tmpltae
+            versionLabel: fdsfds
+            gitBranch: main
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: dssx
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+      - stage:
+          name: asdfasd
+          identifier: asdfasd
+          description: ""
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: sdf
+                    identifier: sdf
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvalMessage: |-
+                        Please review the following information
+                        and approve the pipeline progression
+                      includePipelineExecutionHistory: true
+                      approvers:
+                        minimumCount: 1
+                        disallowPipelineExecutor: false
+                        userGroups: <+input>
+                      isAutoRejectEnabled: false
+                      approverInputs: []
+          tags: {}
