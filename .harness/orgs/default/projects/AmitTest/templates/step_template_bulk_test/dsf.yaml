@@ -1,0 +1,21 @@
+template:
+  name: step template bulk test
+  identifier: step_template_bulk_test
+  versionLabel: dsf
+  type: Step
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 123
+      environmentVariables: []
+      outputVariables: []
