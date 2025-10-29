@@ -1,0 +1,19 @@
+template:
+  name: stage tmeplate bulk test
+  identifier: stage_tmeplate_bulk_test
+  versionLabel: sdf
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: dsf
+              identifier: dsf
+              template:
+                templateRef: step_template_bulk_test
+                versionLabel: dsf
