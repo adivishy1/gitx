@@ -1,0 +1,29 @@
+template:
+  name: merged yaml pipeline
+  identifier: merged_yaml_pipeline
+  versionLabel: sdf
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sdf
+          identifier: sdf
+          tags: {}
+          template:
+            templateRef: test_merged_yaml
+            versionLabel: sfd
+            gitBranch: main
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
