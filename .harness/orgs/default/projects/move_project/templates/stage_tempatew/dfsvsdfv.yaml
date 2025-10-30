@@ -18,3 +18,11 @@ template:
                 templateRef: step_temlaplae13
                 versionLabel: sd
                 gitBranch: main
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
