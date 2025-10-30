@@ -1,0 +1,20 @@
+template:
+  name: stage tempatew
+  identifier: stage_tempatew
+  versionLabel: dfsvsdfv
+  type: Stage
+  projectIdentifier: move_project
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: fd
+              identifier: fd
+              template:
+                templateRef: step_temlaplae13
+                versionLabel: sd
+                gitBranch: main
