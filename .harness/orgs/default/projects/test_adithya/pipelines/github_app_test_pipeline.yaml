@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: d
-        identifier: d
+        name: d1
+        identifier: d1
         tags: {}
         template:
           templateRef: account.test_stage_template_v
