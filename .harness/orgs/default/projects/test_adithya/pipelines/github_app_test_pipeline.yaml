@@ -6,20 +6,27 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: d1
-        identifier: d1
+        name: sad
+        identifier: sad
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: das
+                  identifier: das
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
         tags: {}
-        template:
-          templateRef: account.test_stage_template_v
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: s1
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
