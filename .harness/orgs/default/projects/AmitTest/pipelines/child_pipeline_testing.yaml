@@ -6,8 +6,8 @@ pipeline:
   orgIdentifier: default
   stages:
     - stage:
-        name: dsa
-        identifier: dsa
+        name: dsas
+        identifier: dsas
         tags: {}
         template:
           templateRef: remote_stage_template_demo
