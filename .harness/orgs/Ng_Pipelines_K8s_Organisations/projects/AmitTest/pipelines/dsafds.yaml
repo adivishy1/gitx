@@ -1,0 +1,10 @@
+pipeline:
+  name: dsafds
+  identifier: dsafds
+  tags: {}
+  template:
+    templateRef: test_pipelien_tempaltes
+    versionLabel: ccsd
+    gitBranch: aa_1master-patch
+  projectIdentifier: AmitTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
