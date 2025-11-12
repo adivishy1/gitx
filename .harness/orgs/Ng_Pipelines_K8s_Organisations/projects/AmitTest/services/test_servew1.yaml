@@ -1,0 +1,5 @@
+service:
+  name: test servew1
+  identifier: test_servew1
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: AmitTest
