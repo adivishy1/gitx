@@ -1,0 +1,25 @@
+template:
+  name: test pipelien tempaltes
+  identifier: test_pipelien_tempaltes
+  versionLabel: ccsd
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: as
+          identifier: as
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: asd
+                    identifier: asd
+                    template:
+                      templateRef: test_step_template
+                      versionLabel: d2
+          tags: {}
