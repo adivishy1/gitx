@@ -1,0 +1,17 @@
+template:
+  name: pipeline templateasdfdsfasdfas
+  identifier: pipeline_templateasdfdsfasdfas
+  versionLabel: asdfadsfsdfas
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dfs
+          identifier: dfs
+          tags: {}
+          template:
+            templateRef: stagesdfgsdfasdf
+            versionLabel: asdfasdfasdf
