@@ -1,0 +1,14 @@
+pipeline:
+  name: dsfasdfasdfsafasdf
+  identifier: dsfasdfasdfsafasdf
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asd
+        identifier: asd
+        tags: {}
+        template:
+          templateRef: stagesdfgsdfasdf
+          versionLabel: asdfasdfasdf
