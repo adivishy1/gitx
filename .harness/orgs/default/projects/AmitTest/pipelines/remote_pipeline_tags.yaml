@@ -5,6 +5,7 @@ pipeline:
   orgIdentifier: default
   tags:
     master: v1
+    key2: v2
   stages:
     - stage:
         name: s
