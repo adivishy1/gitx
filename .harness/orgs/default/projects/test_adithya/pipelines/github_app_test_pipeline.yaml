@@ -3,7 +3,8 @@ pipeline:
   identifier: github_app_test_pipeline
   projectIdentifier: test_adithya
   orgIdentifier: default
-  tags: {}
+  tags:
+    key1: v1
   stages:
     - stage:
         name: d1
