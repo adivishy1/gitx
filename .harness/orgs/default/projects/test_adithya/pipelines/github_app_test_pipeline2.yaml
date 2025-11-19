@@ -1,0 +1,26 @@
+pipeline:
+  name: github app test pipeline2
+  identifier: github_app_test_pipeline2
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags:
+    key1: v1
+  stages:
+    - stage:
+        name: d1
+        identifier: d1
+        tags: {}
+        template:
+          templateRef: account.test_stage_template_v
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: s1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
