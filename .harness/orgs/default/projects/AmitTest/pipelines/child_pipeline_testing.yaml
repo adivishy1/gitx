@@ -1,7 +1,8 @@
 pipeline:
   name: child pipeline testing
   identifier: child_pipeline_testing
-  tags: {}
+  tags:
+    master: tag1
   projectIdentifier: AmitTest
   orgIdentifier: default
   stages:
