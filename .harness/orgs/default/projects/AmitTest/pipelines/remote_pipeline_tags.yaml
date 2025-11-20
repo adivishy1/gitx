@@ -4,8 +4,7 @@ pipeline:
   projectIdentifier: AmitTest
   orgIdentifier: default
   tags:
-    master: v1
-    key2: v2
+    c: b
   stages:
     - stage:
         name: s
