@@ -1,0 +1,21 @@
+template:
+  name: test def branch
+  identifier: test_def_branch
+  versionLabel: sd
+  type: Step
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 123
+      environmentVariables: []
+      outputVariables: []
