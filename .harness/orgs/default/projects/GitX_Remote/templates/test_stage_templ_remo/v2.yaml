@@ -17,3 +17,17 @@ template:
               template:
                 templateRef: test_def_branch
                 versionLabel: sd
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo 21
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
