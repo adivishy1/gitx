@@ -6,7 +6,7 @@ template:
   projectIdentifier: GitX_Remote
   orgIdentifier: default
   tags:
-    key1: value1
+    key2: value2
   spec:
     type: Approval
     spec:
