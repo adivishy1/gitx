@@ -1,0 +1,11 @@
+inputs:
+  a: value_a
+  overlay:
+    stages:
+      - steps:
+          - run:
+              script: echo hello1
+            id: run_1
+          - run: echo hello2
+            id: run_2
+        id: stage_1
