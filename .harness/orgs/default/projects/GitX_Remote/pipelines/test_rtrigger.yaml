@@ -1,7 +1,8 @@
 pipeline:
   name: test rtrigger
   identifier: test_rtrigger
-  tags: {}
+  tags:
+    key2: pipeline
   projectIdentifier: GitX_Remote
   orgIdentifier: default
   stages:
