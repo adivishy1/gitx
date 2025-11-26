@@ -1,11 +1,10 @@
-pipeline:
-  inputs:
-    a:
-      type: string
-  clone:
-    disabled: true
-  stages:
-    - steps:
-        - run:
-            script: <+input>
-        - run: <+input>
+inputs:
+  a:
+    type: string
+clone:
+  disabled: true
+stages:
+  - steps:
+      - run:
+          script: <+input>
+      - run: <+input>
