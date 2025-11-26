@@ -1,0 +1,5 @@
+stages:
+  - runtime: shell
+    steps:
+      - run:
+          script: go build
