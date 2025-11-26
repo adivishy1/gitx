@@ -1,0 +1,10 @@
+pipeline:
+  stages:
+    - steps:
+        - run: go build
+        - approval:
+            uses: jira
+            with:
+              connector: k8s_cluster
+              project: GitX_Remote
+        - run: go test
