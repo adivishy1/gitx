@@ -1,4 +1,5 @@
 pipeline:
+  version: 1
   inputs:
     a:
       type: string
