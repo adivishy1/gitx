@@ -1,0 +1,47 @@
+pipeline:
+  name: upload file
+  identifier: upload_file
+  projectIdentifier: AmitTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: FilesUpload
+                  name: FilesUpload_1
+                  identifier: FilesUpload_1
+                  spec: {}
+                  timeout: 30m
+        tags: {}
+    - stage:
+        name: download
+        identifier: download
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          curl --location 'https://app.harness.io/gateway/pipeline/api/input-file/download-file?accountIdentifier=ACCOUNT_IDENTIFIER&filePath=OgiB4-xETamKNVAz-wQRjw/runtimeFileInputData/BzfgcCybRKu74Z-4MgagWg/ZT5C4txUSu-sufYvlwXVgA/image (17)_50566a.png' \
+                          --header 'x-api-key: PAT_TOKEN'
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
