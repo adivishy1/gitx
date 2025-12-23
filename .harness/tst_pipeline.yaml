@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following test update
-                      and approve the pipeline update2
+                      and approve the pipeline update2 update3
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
