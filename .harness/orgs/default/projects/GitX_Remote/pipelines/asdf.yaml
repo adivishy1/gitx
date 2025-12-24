@@ -3,7 +3,7 @@ pipeline:
   identifier: asdf
   tags: {}
   projectIdentifier: GitX_Remote
-  orgIdentifier: default
+  orgIdentifier: newOrg
   stages:
     - stage:
         name: dfsa
@@ -26,8 +26,7 @@ pipeline:
                     approvers:
                       minimumCount: 1
                       disallowPipelineExecutor: false
-                      userGroups:
-                        - account._account_all_users
+                      userGroups: <+input>
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
