@@ -1,7 +1,7 @@
 inputSet:
   name: is12
   identifier: is12
-  orgIdentifier: newOrg
+  orgIdentifier: newOrg12
   projectIdentifier: GitX_Remote
   pipeline:
     identifier: asdf
