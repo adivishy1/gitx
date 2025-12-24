@@ -1,0 +1,21 @@
+inputSet:
+  name: is1
+  identifier: is1
+  orgIdentifier: newOrg
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: asdf
+    stages:
+      - stage:
+          identifier: dfsa
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
