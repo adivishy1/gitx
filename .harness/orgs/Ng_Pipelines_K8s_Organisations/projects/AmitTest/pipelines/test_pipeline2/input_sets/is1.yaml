@@ -1,0 +1,21 @@
+inputSet:
+  name: is1
+  identifier: is1
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: test_pipeline2
+    stages:
+      - stage:
+          identifier: dsf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sdf
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
