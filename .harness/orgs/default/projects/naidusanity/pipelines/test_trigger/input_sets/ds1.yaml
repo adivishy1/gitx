@@ -1,0 +1,21 @@
+inputSet:
+  name: ds1
+  identifier: ds1
+  orgIdentifier: default
+  projectIdentifier: naidusanity
+  pipeline:
+    identifier: test_trigger
+    stages:
+      - stage:
+          identifier: sdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fsd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
