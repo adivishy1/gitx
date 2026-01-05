@@ -1,0 +1,21 @@
+inputSet:
+  name: jh
+  identifier: jh
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: tesying
+    stages:
+      - stage:
+          identifier: jh
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: jh
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
