@@ -1,0 +1,33 @@
+pipeline:
+  name: test rtrigger3
+  identifier: test_rtrigger3
+  tags:
+    key2: pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: das
+        identifier: das
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: ads
+                  identifier: ads
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
