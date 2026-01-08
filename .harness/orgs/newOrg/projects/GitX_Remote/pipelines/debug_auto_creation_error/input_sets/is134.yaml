@@ -1,0 +1,21 @@
+inputSet:
+  name: is134
+  identifier: is134
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: debug_auto_creation_error
+    stages:
+      - stage:
+          identifier: sd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sfd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
