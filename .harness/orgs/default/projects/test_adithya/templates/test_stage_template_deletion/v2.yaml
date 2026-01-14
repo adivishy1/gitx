@@ -1,0 +1,19 @@
+template:
+  name: test stage template deletion
+  identifier: test_stage_template_deletion
+  versionLabel: v2
+  type: Stage
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sd
+              identifier: sd
+              template:
+                templateRef: test_step_deletion_v
+                versionLabel: v1
