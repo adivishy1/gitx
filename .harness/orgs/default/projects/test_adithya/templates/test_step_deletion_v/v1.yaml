@@ -1,0 +1,21 @@
+template:
+  name: test step deletion v
+  identifier: test_step_deletion_v
+  versionLabel: v1
+  type: Step
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 123
+      environmentVariables: []
+      outputVariables: []
