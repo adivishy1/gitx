@@ -12,8 +12,8 @@ template:
       execution:
         steps:
           - step:
-              name: dsf
-              identifier: dsf
+              name: ds
+              identifier: ds
               template:
-                templateRef: test_step_deletion_v
+                templateRef: Test_step_deletion_v
                 versionLabel: v1
