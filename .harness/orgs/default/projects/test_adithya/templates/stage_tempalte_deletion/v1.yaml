@@ -1,0 +1,19 @@
+template:
+  name: stage tempalte deletion
+  identifier: stage_tempalte_deletion
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: dsf
+              identifier: dsf
+              template:
+                templateRef: test_step_deletion_v
+                versionLabel: v1
