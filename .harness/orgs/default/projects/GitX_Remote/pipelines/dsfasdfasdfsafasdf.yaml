@@ -12,3 +12,14 @@ pipeline:
         template:
           templateRef: stagesdfgsdfasdf
           versionLabel: asdfasdfasdf
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
