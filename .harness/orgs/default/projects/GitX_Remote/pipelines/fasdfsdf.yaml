@@ -1,0 +1,29 @@
+pipeline:
+  name: fasdfsdf
+  identifier: fasdfsdf
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: sfd
+        identifier: sfd
+        tags: {}
+        template:
+          templateRef: stage_template_with_shell
+          versionLabel: sdf
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          spec:
+                            source:
+                              type: Inline
+                              spec:
+                                script: <+input>
