@@ -1,0 +1,33 @@
+pipeline:
+  name: test pipeline trigger
+  identifier: test_pipeline_trigger
+  tags: {}
+  projectIdentifier: AmitTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  stages:
+    - stage:
+        name: dfs
+        identifier: dfs
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: fds
+                  identifier: fds
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account._account_all_users
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
