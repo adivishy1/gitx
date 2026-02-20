@@ -17,7 +17,7 @@ pipeline:
                   name: fsd
                   identifier: fsd
                   type: HarnessApproval
-                  timeout: 1d
+                  timeout: 2d
                   spec:
                     approvalMessage: |-
                       Please review the following information
