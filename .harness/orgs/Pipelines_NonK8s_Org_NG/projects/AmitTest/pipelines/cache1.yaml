@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      Please review the following information
+                      Please review the following information dasf
                       and approve the pipeline progression sdfasd
                     includePipelineExecutionHistory: true
                     approvers:
