@@ -3,7 +3,7 @@ pipeline:
   identifier: sdfsdf
   tags: {}
   projectIdentifier: aaaa
-  orgIdentifier: default
+  orgIdentifier: newOrg
   stages:
     - stage:
         name: safd
