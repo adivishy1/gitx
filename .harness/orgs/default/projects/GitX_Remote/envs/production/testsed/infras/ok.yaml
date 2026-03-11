@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: ok
+  identifier: ok
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  environmentRef: testsed
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.account_k8s
+    namespace: ok
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
