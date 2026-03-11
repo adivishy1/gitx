@@ -11,3 +11,4 @@ infrastructureDefinition:
     namespace: <+input>
     releaseName: release-<+INFRA_KEY_SHORT_ID>
   allowSimultaneousDeployments: false
+  xb: sd
