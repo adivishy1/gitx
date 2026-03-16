@@ -3,7 +3,7 @@ pipeline:
   identifier: aa
   tags: {}
   projectIdentifier: aa
-  orgIdentifier: default
+  orgIdentifier: newOrg
   stages:
     - stage:
         name: sad
