@@ -1,0 +1,32 @@
+pipeline:
+  name: dsfs
+  identifier: dsfs
+  tags: {}
+  projectIdentifier: aaa
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: sadf
+        identifier: sadf
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: sdaf
+                  identifier: sdaf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
