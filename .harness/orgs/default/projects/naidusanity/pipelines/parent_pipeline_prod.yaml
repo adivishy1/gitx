@@ -3,6 +3,7 @@ pipeline:
   identifier: parent_pipeline_prod
   projectIdentifier: naidusanity
   orgIdentifier: default
+  a: b
   tags: {}
   stages:
     - stage:
