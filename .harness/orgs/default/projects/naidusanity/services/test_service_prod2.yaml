@@ -16,6 +16,6 @@ service:
                 type: Harness
                 spec:
                   files:
-                    - account:/Sample K8s Manifests
+                    - /nginx
               skipResourceVersioning: false
               enableDeclarativeRollback: false
