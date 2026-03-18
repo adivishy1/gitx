@@ -1,0 +1,5 @@
+service:
+  name: test service prod2
+  identifier: test_service_prod2
+  orgIdentifier: default
+  projectIdentifier: naidusanity
