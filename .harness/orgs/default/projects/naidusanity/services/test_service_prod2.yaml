@@ -3,3 +3,19 @@ service:
   identifier: test_service_prod2
   orgIdentifier: default
   projectIdentifier: naidusanity
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: manifest
+            type: K8sManifest
+            spec:
+              store:
+                type: Harness
+                spec:
+                  files:
+                    - account:/Sample K8s Manifests/nginx.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+  gitOpsEnabled: false
