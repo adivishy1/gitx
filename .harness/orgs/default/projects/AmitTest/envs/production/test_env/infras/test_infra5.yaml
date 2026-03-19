@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: test infra5
+  identifier: test_infra5
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  environmentRef: test_env
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
