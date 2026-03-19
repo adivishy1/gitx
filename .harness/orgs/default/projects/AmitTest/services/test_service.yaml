@@ -1,0 +1,5 @@
+service:
+  name: test service
+  identifier: test_service
+  orgIdentifier: default
+  projectIdentifier: AmitTest
