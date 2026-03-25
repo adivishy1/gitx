@@ -1,7 +1,7 @@
 pipeline:
   name: parent pipeline setup
   identifier: parent_pipeline_setup
-  tags: {a:b}
+  tags: {}
   projectIdentifier: GitX_Remote
   orgIdentifier: default
   stages:
