@@ -1,0 +1,17 @@
+pipeline:
+  name: importFromGitTest
+  identifier: importFromGitTest
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: fsdg
+        identifier: fsdg
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: child_pipeline_setup
+          project: GitX_Remote
+          inputs: {}
