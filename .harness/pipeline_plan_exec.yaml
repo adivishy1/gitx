@@ -31,3 +31,10 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: s13
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: stage_gitx_default
+          versionLabel: v1
