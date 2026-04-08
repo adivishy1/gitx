@@ -32,8 +32,8 @@ pipeline:
                     approverInputs: []
         tags: {}
     - stage:
-        name: s13
-        identifier: s1
+        name: s123
+        identifier: s123
         tags: {}
         template:
           templateRef: stage_gitx_default
