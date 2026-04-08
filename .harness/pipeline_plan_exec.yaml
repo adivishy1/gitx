@@ -38,3 +38,14 @@ pipeline:
         template:
           templateRef: stage_gitx_default
           versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
