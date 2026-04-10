@@ -1,0 +1,23 @@
+inputSet:
+  name: ds
+  identifier: ds
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: pipeline_plan_exec
+    stages:
+      - stage:
+          identifier: s123
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asfd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups:
+                              - account._account_all_users
