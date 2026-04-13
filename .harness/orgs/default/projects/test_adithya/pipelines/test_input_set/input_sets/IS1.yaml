@@ -1,5 +1,6 @@
 inputSet:
   name: IS1
+  tags: {}
   identifier: IS1
   orgIdentifier: default
   projectIdentifier: test_adithya
@@ -18,4 +19,6 @@ inputSet:
                     timeout: 1d
                     spec:
                       approvers:
-                        userGroups: <+input>
+                        userGroups:
+                          - account._account_all_users
+  isInlineHCEntity: false
