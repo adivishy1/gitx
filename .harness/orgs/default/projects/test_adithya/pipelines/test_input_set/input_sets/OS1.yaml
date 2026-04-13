@@ -1,0 +1,9 @@
+overlayInputSet:
+  name: OS1
+  identifier: OS1
+  orgIdentifier: default
+  projectIdentifier: test_adithya
+  pipelineIdentifier: test_input_set
+  inputSetReferences:
+    - IS1
+  tags: {}
