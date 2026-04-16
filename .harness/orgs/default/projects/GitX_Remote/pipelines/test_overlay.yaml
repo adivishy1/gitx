@@ -1,0 +1,32 @@
+pipeline:
+  name: test overlay
+  identifier: test_overlay
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: adfs
+        identifier: adfs
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: afds
+                  identifier: afds
+                  type: HarnessApproval
+                  timeout: <+input>
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
