@@ -5,5 +5,5 @@ overlayInputSet:
   projectIdentifier: GitX_Remote
   pipelineIdentifier: test_overlay
   inputSetReferences:
-    - is1
+    - is2
   tags: {}
