@@ -1,0 +1,25 @@
+pipeline:
+  name: test ref master
+  identifier: test_ref_master
+  projectIdentifier: test_adithya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dsf
+        identifier: dsf
+        tags: {}
+        template:
+          templateRef: stage_template_defualt
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: as
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
