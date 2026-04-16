@@ -1,0 +1,21 @@
+inputSet:
+  name: is1
+  identifier: is1
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: test_overlay
+    stages:
+      - stage:
+          identifier: adfs
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: afds
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvers:
+                        userGroups: <+input>
