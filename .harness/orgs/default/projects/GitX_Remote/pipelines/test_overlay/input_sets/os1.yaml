@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: os1
+  identifier: os1
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipelineIdentifier: test_overlay
+  inputSetReferences:
+    - is1
+    - is2
+  tags: {}
