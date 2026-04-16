@@ -6,5 +6,4 @@ overlayInputSet:
   pipelineIdentifier: test_overlay
   inputSetReferences:
     - is1
-    - is2
   tags: {}
