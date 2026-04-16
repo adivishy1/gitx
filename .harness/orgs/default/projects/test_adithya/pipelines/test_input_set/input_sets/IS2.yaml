@@ -1,0 +1,22 @@
+inputSet:
+  name: IS2
+  identifier: IS2
+  orgIdentifier: default
+  projectIdentifier: test_adithya
+  pipeline:
+    identifier: test_input_set
+    stages:
+      - stage:
+          identifier: fsd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fds
+                    type: HarnessApproval
+                    timeout: 2d
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
