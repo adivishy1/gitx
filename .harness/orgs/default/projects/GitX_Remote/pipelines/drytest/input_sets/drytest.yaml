@@ -1,0 +1,23 @@
+inputSet:
+  name: drytest
+  identifier: drytest
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: drytest
+    stages:
+      - stage:
+          identifier: as
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asfd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups:
+                              - account._account_all_users
