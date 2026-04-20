@@ -1,0 +1,23 @@
+inputSet:
+  name: dry-run-IS
+  identifier: dryrunIS
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: drytestpipeline
+    stages:
+      - stage:
+          identifier: das
+          template:
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: asd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups:
+                              - account._account_all_users
