@@ -1,0 +1,25 @@
+pipeline:
+  name: dry-test-pipeline
+  identifier: drytestpipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: das
+        identifier: das
+        tags: {}
+        template:
+          templateRef: dry_run_test
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: asd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
