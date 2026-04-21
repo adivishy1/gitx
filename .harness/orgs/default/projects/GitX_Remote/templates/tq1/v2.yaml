@@ -1,0 +1,35 @@
+template:
+  name: tq1
+  identifier: tq1
+  type: Pipeline
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: adsf2
+          identifier: adsf2
+          description: ""
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: asdf
+                    identifier: asdf
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvalMessage: |-
+                        Please review the following information
+                        and approve the pipeline progression
+                      includePipelineExecutionHistory: true
+                      approvers:
+                        minimumCount: 1
+                        disallowPipelineExecutor: false
+                        userGroups: <+input>
+                      isAutoRejectEnabled: false
+                      approverInputs: []
+          tags: {}
+  versionLabel: v2
