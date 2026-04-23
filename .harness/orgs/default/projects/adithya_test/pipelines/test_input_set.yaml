@@ -38,7 +38,7 @@ pipeline:
                       type: Inline
                       spec:
                         script: |-
-                          echo  "+trigger.branch: " <+trigger.branch>
+                          echo  "+trigger.branch:: " <+trigger.branch>
                           echo "trigger.targetBranch: " <+trigger.targetBranch>
                     environmentVariables: []
                     outputVariables: []
