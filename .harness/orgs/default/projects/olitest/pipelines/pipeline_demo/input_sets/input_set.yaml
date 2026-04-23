@@ -17,4 +17,4 @@ inputSet:
                     identifier: step1
                     type: HarnessApproval
                     spec:
-                      approvalMessage: executing from master-demo branch
+                      approvalMessage: executing from master demo branch
