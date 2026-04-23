@@ -38,8 +38,8 @@ pipeline:
                       type: Inline
                       spec:
                         script: |-
-                          echo  "+trigger.branch" <+trigger.branch>
-                          echo "trigger.targetBranch" <+trigger.targetBranch>
+                          echo  "+trigger.branch: " <+trigger.branch>
+                          echo "trigger.targetBranch: " <+trigger.targetBranch>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
