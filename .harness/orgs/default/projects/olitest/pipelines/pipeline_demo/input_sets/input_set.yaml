@@ -1,0 +1,19 @@
+inputSet:
+  name: input set
+  identifier: input_set
+  orgIdentifier: default
+  projectIdentifier: olitest
+  pipeline:
+    identifier: pipeline_demo
+    stages:
+      - stage:
+          identifier: stage1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: step1
+                    type: HarnessApproval
+                    spec:
+                      approvalMessage: executing from master branch
