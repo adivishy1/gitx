@@ -7,4 +7,4 @@ overlayInputSet:
   pipelineIdentifier: repro_merge_issue
   inputSetReferences:
     - IS2
-    - IS1
+    - IS3
