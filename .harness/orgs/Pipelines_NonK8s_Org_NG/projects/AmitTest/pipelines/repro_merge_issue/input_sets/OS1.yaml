@@ -5,5 +5,5 @@ overlayInputSet:
   projectIdentifier: AmitTest
   pipelineIdentifier: repro_merge_issue
   inputSetReferences:
-    - IS2
+    - IS1
   tags: {}
