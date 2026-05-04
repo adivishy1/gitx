@@ -1,0 +1,21 @@
+inputSet:
+  name: IS1
+  identifier: IS1
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: repro_merge_issue
+    stages:
+      - stage:
+          identifier: asdf
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: asdf
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvers:
+                        userGroups: <+input>
