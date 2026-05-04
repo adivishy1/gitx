@@ -1,9 +1,9 @@
 overlayInputSet:
   name: OS1
+  tags: {}
   identifier: OS1
   orgIdentifier: Pipelines_NonK8s_Org_NG
   projectIdentifier: AmitTest
   pipelineIdentifier: repro_merge_issue
   inputSetReferences:
     - IS2
-  tags: {}
