@@ -1,5 +1,6 @@
 inputSet:
   name: IS2
+  tags: {}
   identifier: IS2
   orgIdentifier: Pipelines_NonK8s_Org_NG
   projectIdentifier: AmitTest
@@ -15,7 +16,7 @@ inputSet:
                 - step:
                     identifier: asdf
                     type: HarnessApproval
-                    timeout: 1w 3d
+                    timeout: <+input>
                     spec:
                       approvers:
                         userGroups:
