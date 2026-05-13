@@ -1,0 +1,32 @@
+pipeline:
+  name: test iterator
+  identifier: test_iterator
+  tags: {}
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: sdaf
+        identifier: sdaf
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: saf
+                  identifier: saf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
