@@ -30,3 +30,40 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+    - stage:
+        name: s2
+        identifier: s2
+        tags: {}
+        template:
+          templateRef: org.test_org_template
+          versionLabel: v1
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sfd
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+    - stage:
+        name: s3
+        identifier: s3
+        tags: {}
+        template:
+          templateRef: import_from_non_default2
+          versionLabel: v1
+          gitBranch: PipelineRemote_1739293842714
+          templateInputs:
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: sdf
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
