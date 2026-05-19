@@ -40,7 +40,7 @@ template:
                     name: sdf
                     identifier: sdf
                     type: HarnessApproval
-                    timeout: 1d
+                    timeout: <+input>
                     spec:
                       approvalMessage: |-
                         Please review the following information
