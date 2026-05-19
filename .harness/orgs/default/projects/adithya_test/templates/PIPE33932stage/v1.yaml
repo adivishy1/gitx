@@ -15,7 +15,7 @@ template:
               name: sfd
               identifier: sfd
               type: HarnessApproval
-              timeout: 1d
+              timeout: <+input>
               spec:
                 approvalMessage: |-
                   Please review the following information
