@@ -1,0 +1,28 @@
+template:
+  name: PIPE-33932-pipeline
+  identifier: PIPE33932pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sfd
+          identifier: sfd
+          tags: {}
+          template:
+            templateRef: PIPE33932stage
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sfd
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
