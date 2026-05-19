@@ -25,4 +25,5 @@ template:
                         type: HarnessApproval
                         spec:
                           approvers:
+                            minimumCount: <+input>
                             userGroups: <+input>
