@@ -23,6 +23,7 @@ template:
                     - step:
                         identifier: sfd
                         type: HarnessApproval
+                        timeout: <+input>
                         spec:
                           approvers:
                             minimumCount: <+input>
