@@ -1,0 +1,21 @@
+inputSet:
+  name: is1
+  identifier: is1
+  orgIdentifier: default
+  projectIdentifier: adithya_test
+  pipeline:
+    identifier: test_delete
+    stages:
+      - stage:
+          identifier: fd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: fds
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
