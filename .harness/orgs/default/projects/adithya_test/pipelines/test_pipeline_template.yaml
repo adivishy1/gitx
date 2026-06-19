@@ -23,5 +23,19 @@ pipeline:
                             approvers:
                               minimumCount: <+input>
                               userGroups: <+input>
+        - stage:
+            identifier: fdv
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: fdsv
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
   projectIdentifier: adithya_test
   orgIdentifier: default
