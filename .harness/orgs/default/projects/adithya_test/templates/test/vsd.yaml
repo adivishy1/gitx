@@ -1,0 +1,30 @@
+template:
+  name: test
+  identifier: test
+  versionLabel: vsd
+  type: Pipeline
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: dsf
+          identifier: dsf
+          tags: {}
+          template:
+            templateRef: PIPE33932stage
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: sfd
+                        type: HarnessApproval
+                        timeout: <+input>
+                        spec:
+                          approvers:
+                            minimumCount: <+input>
+                            userGroups: <+input>
