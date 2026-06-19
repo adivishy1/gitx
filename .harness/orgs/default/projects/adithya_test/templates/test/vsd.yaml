@@ -28,3 +28,21 @@ template:
                           approvers:
                             minimumCount: <+input>
                             userGroups: <+input>
+      - stage:
+          name: fdv
+          identifier: fdv
+          tags: {}
+          template:
+            templateRef: stage23
+            versionLabel: df
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: fdsv
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
