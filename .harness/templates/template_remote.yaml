@@ -1,0 +1,14 @@
+template:
+  stage:
+    - name: buildAndTestStage_1
+      id: buildAndTestStage_1
+      steps:
+        - name: runBuild
+          run: mvn -B clean package -DskipTests
+          id: runBuild
+        - name: runTests
+          run-test:
+            script: mvn test
+            intelligence:
+              disabled: false
+          id: runTests
