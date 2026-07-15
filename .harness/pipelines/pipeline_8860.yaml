@@ -3,7 +3,7 @@ pipeline:
     - name: Stage 1
       id: stage1
       steps:
-        - name: Step 1sdfasd
-          id: step1sdfasd
+        - name: Step 1sdfasdas1
+          id: step1sdfasd12
           run: 
             script: echo "hello world"
