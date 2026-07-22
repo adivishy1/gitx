@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following information sd sdfsdfd dsf asdf
-                      and approve the pipeline progression sdf new sdf sdfsad sdf
+                      and approve the pipeline progression 
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
