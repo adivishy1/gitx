@@ -1,0 +1,21 @@
+inputSet:
+  name: afs
+  identifier: afs
+  orgIdentifier: default
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: trigger_testing
+    stages:
+      - stage:
+          identifier: afs
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: afsd
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
