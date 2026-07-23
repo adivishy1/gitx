@@ -1,0 +1,4 @@
+template:
+  step:
+    run:
+      script: echo 123
