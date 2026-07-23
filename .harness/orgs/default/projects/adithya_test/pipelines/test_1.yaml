@@ -1,0 +1,32 @@
+pipeline:
+  name: test 1
+  identifier: test_1
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: fad
+        identifier: fad
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: dsf
+                  identifier: dsf
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
