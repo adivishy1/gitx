@@ -7,7 +7,3 @@ pipeline:
           id: step1
           run:
             script: echo "hello world"
-        - name: sdf
-          id: sdf
-          template:
-            uses: template_be8b@v1
