@@ -1,0 +1,13 @@
+pipeline:
+  stages:
+    - name: Stage 1
+      id: stage1
+      steps:
+        - name: Step 1
+          id: step1
+          run:
+            script: echo "hello world"
+        - name: sdf
+          id: sdf
+          template:
+            uses: template_be8b@v1
