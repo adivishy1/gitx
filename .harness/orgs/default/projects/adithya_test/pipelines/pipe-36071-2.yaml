@@ -41,9 +41,14 @@ pipeline:
           userGroups: []
           recipients:
             - adithya.viswanatha@harness.io
+      enabled: true
       template:
         versionLabel: v1
-        templateRef: MS_teams
+        templateRef: noti
         orgIdentifier: default
         projectIdentifier: adithya_test
-      enabled: true
+        templateInputs:
+          variables:
+            - name: v1
+              type: string
+              value: sad
