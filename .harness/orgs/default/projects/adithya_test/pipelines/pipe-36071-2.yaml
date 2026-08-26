@@ -30,3 +30,20 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+  notificationRules:
+    - name: dsaf
+      identifier: dsaf
+      pipelineEvents:
+        - type: AllEvents
+      notificationMethod:
+        type: Email
+        spec:
+          userGroups: []
+          recipients:
+            - adithya.viswanatha@harness.io
+      template:
+        versionLabel: v1
+        templateRef: MS_teams
+        orgIdentifier: default
+        projectIdentifier: adithya_test
+      enabled: true
