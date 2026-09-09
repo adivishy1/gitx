@@ -30,3 +30,15 @@ pipeline:
                     isAutoRejectEnabled: false
                     approverInputs: []
         tags: {}
+  notificationRules:
+    - name: test
+      identifier: test
+      pipelineEvents:
+        - type: PipelineStart
+        - type: WaitingForUserAction
+      notificationMethod:
+        type: Slack
+        spec:
+          userGroups: []
+          webhookUrl: https://webhook.site/f5a90daa-7b8a-4fa0-b352-d62a31943a00
+      enabled: true
