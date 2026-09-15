@@ -1,0 +1,34 @@
+template:
+  name: test rate limit
+  identifier: test_rate_limit
+  type: Stage
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: adsf
+              identifier: adsf
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: <+input>
+                isAutoRejectEnabled: false
+                approverInputs: []
+          - step:
+              name: cwcewd
+              identifier: cwcewd
+              template:
+                templateRef: account.bbOnPremTesting
+                versionLabel: v1
+                gitBranch: master
+  versionLabel: v2
