@@ -6,7 +6,7 @@ template:
   tags: {}
   spec:
     timeout: 10m
-    type: ShellScriptProvision
+    type: ShellScriptProvision12
     spec:
       source:
         type: Inline
