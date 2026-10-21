@@ -70,7 +70,7 @@ pipeline:
                   type: HarnessApproval
                   timeout: 1d
                   spec:
-                    approvalMessage: master
+                    approvalMessage: testerRebase
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
