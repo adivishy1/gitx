@@ -15,5 +15,5 @@ template:
           identifier: Echo
           spec:
             shell: Sh
-            command: echo "hiddf"
+            command: echo "hiddf df"
     outputVariables: []
