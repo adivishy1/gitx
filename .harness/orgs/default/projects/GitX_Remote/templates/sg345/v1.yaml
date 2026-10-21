@@ -1,0 +1,19 @@
+template:
+  name: sg345
+  identifier: sg345
+  versionLabel: v1
+  type: StepGroup
+  projectIdentifier: GitX_Remote
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          type: Run
+          name: Echo
+          identifier: Echo
+          spec:
+            shell: Sh
+            command: echo "hiddf df"
+    outputVariables: []
