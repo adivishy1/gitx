@@ -1,7 +1,7 @@
 template:
   name: repro_sg23
   identifier: repro_sg23
-  versionLabel: 1.0.0
+  versionLabel: 2.0.0
   type: StepGroup
   projectIdentifier: GitX_Remote
   orgIdentifier: default
