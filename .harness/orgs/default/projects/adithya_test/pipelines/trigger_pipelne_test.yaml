@@ -20,7 +20,7 @@ pipeline:
                   timeout: 1d
                   spec:
                     approvalMessage: |-
-                      my local branch
+                      my local branch 123
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
