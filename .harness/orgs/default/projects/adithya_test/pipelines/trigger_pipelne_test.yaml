@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: asd
         identifier: asd
-        description: ""
+        description: sdf
         type: Approval
         spec:
           execution:
