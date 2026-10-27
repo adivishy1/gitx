@@ -1,0 +1,14 @@
+pipeline:
+  name: testing bulk
+  identifier: testing_bulk
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: kj
+        identifier: kj
+        tags: {}
+        template:
+          templateRef: stage_bulk
+          versionLabel: v1
