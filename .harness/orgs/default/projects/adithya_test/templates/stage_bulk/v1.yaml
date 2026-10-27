@@ -1,0 +1,19 @@
+template:
+  name: stage bulk
+  identifier: stage_bulk
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: dsf
+              identifier: dsf
+              template:
+                templateRef: step_bulk
+                versionLabel: v1
