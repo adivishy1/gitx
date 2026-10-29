@@ -1,0 +1,22 @@
+inputSet:
+  name: sdfdsfs
+  identifier: sdfdsfs
+  orgIdentifier: default
+  projectIdentifier: adithya_test
+  pipeline:
+    identifier: test_dry_run123
+    stages:
+      - stage:
+          identifier: df
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sdf
+                    type: HarnessApproval
+                    timeout: <+input>
+                    spec:
+                      approvers:
+                        userGroups:
+                          - _project_all_users
