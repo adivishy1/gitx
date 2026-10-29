@@ -42,3 +42,8 @@ pipeline:
       description: ""
       required: false
       value: <+input>
+    - name: v3
+      type: String
+      description: ""
+      required: false
+      value: <+input>
