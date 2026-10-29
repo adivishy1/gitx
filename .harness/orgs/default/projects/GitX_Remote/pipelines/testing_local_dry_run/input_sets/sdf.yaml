@@ -1,0 +1,22 @@
+inputSet:
+  name: sdf
+  identifier: sdf
+  orgIdentifier: default
+  projectIdentifier: GitX_Remote
+  pipeline:
+    identifier: testing_local_dry_run
+    stages:
+      - stage:
+          identifier: sd
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sadf
+                    type: HarnessApproval
+                    timeout: 1d
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users
