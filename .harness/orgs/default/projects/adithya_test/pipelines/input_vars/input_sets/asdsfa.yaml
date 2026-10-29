@@ -1,0 +1,11 @@
+inputSet:
+  name: asdsfa
+  identifier: asdsfa
+  orgIdentifier: default
+  projectIdentifier: adithya_test
+  pipeline:
+    identifier: input_vars
+    variables:
+      - name: v1
+        type: String
+        value: <+input>
