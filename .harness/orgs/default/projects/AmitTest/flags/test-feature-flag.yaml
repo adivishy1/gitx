@@ -1,0 +1,10 @@
+fmeResource:
+  name: test-feature-flag
+  description: 'this is a test description '
+  trafficType: user
+  rolloutStatus: Pre-Production
+  tags:
+  - onboarding
+  owners:
+  - type: user
+    id: kIbAmAVeQIaUPntB2jDBKA
