@@ -1,6 +1,6 @@
 fmeResource:
   name: test-feature-flag
-  description: 'this is a test description '
+  description: this is a test description 123
   trafficType: user
   rolloutStatus: Pre-Production
   tags:
