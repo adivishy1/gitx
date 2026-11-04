@@ -15,7 +15,7 @@ template:
               name: das
               identifier: das
               type: HarnessApproval
-              timeout: <+input>
+              timeout: 1d
               spec:
                 approvalMessage: <+input>
                 includePipelineExecutionHistory: true
