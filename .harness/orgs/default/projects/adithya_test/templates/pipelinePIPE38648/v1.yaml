@@ -25,5 +25,6 @@ template:
                         type: HarnessApproval
                         timeout: <+input>
                         spec:
+                          approvalMessage: <+input>
                           approvers:
                             userGroups: <+input>
