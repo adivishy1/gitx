@@ -17,9 +17,7 @@ template:
               type: HarnessApproval
               timeout: <+input>
               spec:
-                approvalMessage: |-
-                  Please review the following information
-                  and approve the pipeline progression
+                approvalMessage: <+input>
                 includePipelineExecutionHistory: true
                 approvers:
                   minimumCount: 1
