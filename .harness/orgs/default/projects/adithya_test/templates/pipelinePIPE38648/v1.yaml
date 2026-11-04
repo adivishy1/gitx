@@ -1,0 +1,29 @@
+template:
+  name: pipelinePIPE-38648
+  identifier: pipelinePIPE38648
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: f
+          identifier: f
+          tags: {}
+          template:
+            templateRef: PIPE38648
+            versionLabel: s
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: das
+                        type: HarnessApproval
+                        timeout: <+input>
+                        spec:
+                          approvers:
+                            userGroups: <+input>
