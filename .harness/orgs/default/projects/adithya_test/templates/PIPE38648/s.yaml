@@ -1,0 +1,30 @@
+template:
+  name: PIPE-38648
+  identifier: PIPE38648
+  versionLabel: s
+  type: Stage
+  projectIdentifier: adithya_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: das
+              identifier: das
+              type: HarnessApproval
+              timeout: 1d
+              spec:
+                approvalMessage: |-
+                  Please review the following information
+                  and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups:
+                    - _project_all_users
+                isAutoRejectEnabled: false
+                approverInputs: []
